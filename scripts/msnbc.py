@@ -103,6 +103,6 @@ if __name__ == "__main__":
                 writer.writerow(data)
             except Exception as e:
                 print(e)
-                print(url, res2.response)
+                print(url)
         #break
     f.close()
