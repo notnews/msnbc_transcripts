@@ -2,6 +2,7 @@
 
 We scraped https://www.msnbc.com/transcripts to get all the transcripts from 2010--2021. 
 
+```
 year	 n_transcripts
 2010      43
 2011     115
@@ -16,6 +17,7 @@ year	 n_transcripts
 2020    1286
 2021    1476
 2022     131
+```
 
 ### Scripts
 [Scraping Script](scripts/msnbc.py)
