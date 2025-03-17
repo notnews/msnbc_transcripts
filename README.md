@@ -1,4 +1,4 @@
-## MSNBC Transcripts: 2010--Jan 2022
+### MSNBC Transcripts: 2010--2022
 
 We scraped https://www.msnbc.com/transcripts to get all the transcripts from 2010--2021. 
 
@@ -19,11 +19,28 @@ year	 n_transcripts
 2022     131
 ```
 
-### Scripts
-[Scraping Script](scripts/msnbc.py)
+When I scraped in 03/2025, I got the following (so essentially 2022)
 
+```
+year
+2017       2
+2020     703
+2021    1479
+2022    1156
+2023      52
+2024      48
+2025      11
+```
+
+### Scripts
+
+1. [Scrape](scripts/msnbc.py)
+2. [Quick Peek](scripts/peek_file.ipynb)
+3. [Upload to Dataverse][scripts/upload_to_dataverse.ipynb]
 
 ### Data
 
-The final data posted on the Harvard Dataverse includes 16k scripts spanning 2003--2014 that were scraped earlier. The data are posted at:
+The final data posted on the Harvard Dataverse includes 16k scripts spanning 2003--2014 that were scraped earlier. The data scraped in 2025 is stored under `msnbc_transcripts_2022.csv.gz` 
+
+The data are posted at:
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FUPJDE1
