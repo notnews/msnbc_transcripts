@@ -1,6 +1,6 @@
 # MSNBC Transcripts
 
-Collection of MSNBC show transcripts from 2010–2022.
+Collection of MSNBC show transcripts from 2008–2022.
 
 ## Download
 
@@ -33,6 +33,31 @@ https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UPJDE1
 - `msnbc_transcripts_api_2010-2022.tar.gz` — HTML transcript files (186MB)
 - `msnbc_transcripts_api_2010-2022_metadata.csv` — metadata for all transcripts
 - `msnbc_shows_api.csv` — show list with transcript counts
+
+### Legacy Scrape (2008–2014)
+
+5,369 transcripts from the now-defunct http://www.nbcnews.com/id/3719710, scraped via [archive.org](https://web.archive.org/web/20170601234403/http://www.nbcnews.com/id/3719710).
+
+| Year | Transcripts |
+|------|-------------|
+| 2008 | 76 |
+| 2009 | 434 |
+| 2010 | 752 |
+| 2011 | 1,042 |
+| 2012 | 1,164 |
+| 2013 | 1,177 |
+| 2014 | 724 |
+
+**Files (on Dataverse):**
+- Raw HTML files and final CSV available at: https://doi.org/10.7910/DVN/ND1TCV
+
+**Local files:**
+- `data/legacy_2008-2014/legacy_2008-2014_links.csv` — list of all transcript URLs
+- `data/legacy_2008-2014/legacy_2008-2014_links_with_metadata.txt` — URLs with show names and dates
+
+**Notes:**
+- Scripts from 2014
+- Some transcripts had date typos (e.g., 'Thusday', 'Februrary') causing parsing failures
 
 ### Earlier Scrapes
 
@@ -75,3 +100,7 @@ For reproducibility or extending the dataset:
 - [HTML Scraper](scripts/msnbc.py) — scrapes transcript listing pages
 - [Quick Peek](scripts/peek_file.ipynb) — preview data
 - [Upload to Dataverse](scripts/upload_to_dataverse.ipynb)
+
+**Legacy scripts (2008–2014):**
+- [Legacy Crawl](scripts/legacy/msnbc_legacy_crawl.py) — crawls archive.org for transcript links
+- [Legacy Extract](scripts/legacy/msnbc_legacy_extract.py) — extracts transcripts from HTML files
