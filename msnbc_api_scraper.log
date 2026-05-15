@@ -1,0 +1,232 @@
+2026-05-14 21:18:04,036 - INFO - Fetching shows taxonomy...
+2026-05-14 21:18:04,922 - INFO - Fetched 100 shows from page 1
+2026-05-14 21:18:06,545 - INFO - Fetched 100 shows from page 2
+2026-05-14 21:18:07,885 - INFO - Fetched 16 shows from page 3
+2026-05-14 21:18:09,428 - INFO - Saved 216 shows to /Users/soodoku/Documents/GitHub/msnbc_transcripts/data/shows.csv
+2026-05-14 21:18:15,498 - INFO - Total transcripts: 10744, Total pages: 108
+2026-05-14 21:18:15,507 - INFO - Fetching page 1/108
+2026-05-14 21:18:15,640 - INFO - Page 1: processed 100 posts, total: 100
+2026-05-14 21:18:16,644 - INFO - Fetching page 2/108
+2026-05-14 21:18:21,819 - INFO - Page 2: processed 100 posts, total: 200
+2026-05-14 21:18:22,823 - INFO - Fetching page 3/108
+2026-05-14 21:18:29,744 - INFO - Page 3: processed 100 posts, total: 300
+2026-05-14 21:18:30,750 - INFO - Fetching page 4/108
+2026-05-14 21:18:35,827 - INFO - Page 4: processed 100 posts, total: 400
+2026-05-14 21:18:36,832 - INFO - Fetching page 5/108
+2026-05-14 21:18:43,918 - INFO - Page 5: processed 100 posts, total: 500
+2026-05-14 21:18:44,923 - INFO - Fetching page 6/108
+2026-05-14 21:18:51,577 - INFO - Page 6: processed 100 posts, total: 600
+2026-05-14 21:18:52,578 - INFO - Fetching page 7/108
+2026-05-14 21:18:59,244 - INFO - Page 7: processed 100 posts, total: 700
+2026-05-14 21:19:00,249 - INFO - Fetching page 8/108
+2026-05-14 21:19:06,176 - INFO - Page 8: processed 100 posts, total: 800
+2026-05-14 21:19:07,182 - INFO - Fetching page 9/108
+2026-05-14 21:19:15,230 - INFO - Page 9: processed 100 posts, total: 900
+2026-05-14 21:19:16,235 - INFO - Fetching page 10/108
+2026-05-14 21:19:23,165 - INFO - Page 10: processed 100 posts, total: 1000
+2026-05-14 21:19:24,167 - INFO - Fetching page 11/108
+2026-05-14 21:19:31,186 - INFO - Page 11: processed 100 posts, total: 1100
+2026-05-14 21:19:32,189 - INFO - Fetching page 12/108
+2026-05-14 21:19:39,379 - INFO - Page 12: processed 100 posts, total: 1200
+2026-05-14 21:19:40,384 - INFO - Fetching page 13/108
+2026-05-14 21:19:47,310 - INFO - Page 13: processed 100 posts, total: 1300
+2026-05-14 21:19:48,314 - INFO - Fetching page 14/108
+2026-05-14 21:19:53,445 - INFO - Page 14: processed 100 posts, total: 1400
+2026-05-14 21:19:54,450 - INFO - Fetching page 15/108
+2026-05-14 21:19:59,355 - INFO - Page 15: processed 100 posts, total: 1500
+2026-05-14 21:20:00,360 - INFO - Fetching page 16/108
+2026-05-14 21:20:06,679 - INFO - Page 16: processed 100 posts, total: 1600
+2026-05-14 21:20:07,684 - INFO - Fetching page 17/108
+2026-05-14 21:20:14,152 - INFO - Page 17: processed 100 posts, total: 1700
+2026-05-14 21:20:15,155 - INFO - Fetching page 18/108
+2026-05-14 21:20:20,398 - INFO - Page 18: processed 100 posts, total: 1800
+2026-05-14 21:20:21,403 - INFO - Fetching page 19/108
+2026-05-14 21:20:28,109 - INFO - Page 19: processed 100 posts, total: 1900
+2026-05-14 21:20:29,114 - INFO - Fetching page 20/108
+2026-05-14 21:20:34,512 - INFO - Page 20: processed 100 posts, total: 2000
+2026-05-14 21:20:35,517 - INFO - Fetching page 21/108
+2026-05-14 21:20:41,921 - INFO - Page 21: processed 100 posts, total: 2100
+2026-05-14 21:20:42,924 - INFO - Fetching page 22/108
+2026-05-14 21:20:49,860 - INFO - Page 22: processed 100 posts, total: 2200
+2026-05-14 21:20:50,865 - INFO - Fetching page 23/108
+2026-05-14 21:20:57,833 - INFO - Page 23: processed 100 posts, total: 2300
+2026-05-14 21:20:58,839 - INFO - Fetching page 24/108
+2026-05-14 21:21:06,381 - INFO - Page 24: processed 100 posts, total: 2400
+2026-05-14 21:21:07,386 - INFO - Fetching page 25/108
+2026-05-14 21:21:16,366 - INFO - Page 25: processed 100 posts, total: 2500
+2026-05-14 21:21:17,369 - INFO - Fetching page 26/108
+2026-05-14 21:21:22,691 - INFO - Page 26: processed 100 posts, total: 2600
+2026-05-14 21:21:23,696 - INFO - Fetching page 27/108
+2026-05-14 21:21:33,918 - INFO - Page 27: processed 100 posts, total: 2700
+2026-05-14 21:21:34,922 - INFO - Fetching page 28/108
+2026-05-14 21:21:41,747 - INFO - Page 28: processed 100 posts, total: 2800
+2026-05-14 21:21:42,750 - INFO - Fetching page 29/108
+2026-05-14 21:21:49,343 - INFO - Page 29: processed 100 posts, total: 2900
+2026-05-14 21:21:50,344 - INFO - Fetching page 30/108
+2026-05-14 21:21:55,397 - INFO - Page 30: processed 100 posts, total: 3000
+2026-05-14 21:21:56,403 - INFO - Fetching page 31/108
+2026-05-14 21:22:03,037 - INFO - Page 31: processed 100 posts, total: 3100
+2026-05-14 21:22:04,039 - INFO - Fetching page 32/108
+2026-05-14 21:22:11,027 - INFO - Page 32: processed 100 posts, total: 3200
+2026-05-14 21:22:12,028 - INFO - Fetching page 33/108
+2026-05-14 21:22:18,891 - INFO - Page 33: processed 100 posts, total: 3300
+2026-05-14 21:22:19,897 - INFO - Fetching page 34/108
+2026-05-14 21:22:26,225 - INFO - Page 34: processed 100 posts, total: 3400
+2026-05-14 21:22:27,231 - INFO - Fetching page 35/108
+2026-05-14 21:22:32,365 - INFO - Page 35: processed 100 posts, total: 3500
+2026-05-14 21:22:33,367 - INFO - Fetching page 36/108
+2026-05-14 21:22:40,654 - INFO - Page 36: processed 100 posts, total: 3600
+2026-05-14 21:22:41,656 - INFO - Fetching page 37/108
+2026-05-14 21:22:51,453 - INFO - Page 37: processed 100 posts, total: 3700
+2026-05-14 21:22:52,457 - INFO - Fetching page 38/108
+2026-05-14 21:22:59,681 - INFO - Page 38: processed 100 posts, total: 3800
+2026-05-14 21:23:00,686 - INFO - Fetching page 39/108
+2026-05-14 21:23:07,385 - INFO - Page 39: processed 100 posts, total: 3900
+2026-05-14 21:23:08,387 - INFO - Fetching page 40/108
+2026-05-14 21:23:13,729 - INFO - Page 40: processed 100 posts, total: 4000
+2026-05-14 21:23:14,731 - INFO - Fetching page 41/108
+2026-05-14 21:23:21,579 - INFO - Page 41: processed 100 posts, total: 4100
+2026-05-14 21:23:22,583 - INFO - Fetching page 42/108
+2026-05-14 21:23:28,850 - INFO - Page 42: processed 100 posts, total: 4200
+2026-05-14 21:23:29,852 - INFO - Fetching page 43/108
+2026-05-14 21:23:37,950 - INFO - Page 43: processed 100 posts, total: 4300
+2026-05-14 21:23:38,955 - INFO - Fetching page 44/108
+2026-05-14 21:23:46,881 - INFO - Page 44: processed 100 posts, total: 4400
+2026-05-14 21:23:47,882 - INFO - Fetching page 45/108
+2026-05-14 21:23:54,285 - INFO - Page 45: processed 100 posts, total: 4500
+2026-05-14 21:23:55,290 - INFO - Fetching page 46/108
+2026-05-14 21:24:02,100 - INFO - Page 46: processed 100 posts, total: 4600
+2026-05-14 21:24:03,103 - INFO - Fetching page 47/108
+2026-05-14 21:24:11,087 - INFO - Page 47: processed 100 posts, total: 4700
+2026-05-14 21:24:12,088 - INFO - Fetching page 48/108
+2026-05-14 21:24:21,865 - INFO - Page 48: processed 100 posts, total: 4800
+2026-05-14 21:24:22,868 - INFO - Fetching page 49/108
+2026-05-14 21:24:28,865 - INFO - Page 49: processed 100 posts, total: 4900
+2026-05-14 21:24:29,867 - INFO - Fetching page 50/108
+2026-05-14 21:24:35,979 - INFO - Page 50: processed 100 posts, total: 5000
+2026-05-14 21:24:36,985 - INFO - Fetching page 51/108
+2026-05-14 21:24:44,164 - INFO - Page 51: processed 100 posts, total: 5100
+2026-05-14 21:24:45,170 - INFO - Fetching page 52/108
+2026-05-14 21:24:51,502 - INFO - Page 52: processed 100 posts, total: 5200
+2026-05-14 21:24:52,503 - INFO - Fetching page 53/108
+2026-05-14 21:24:58,708 - INFO - Page 53: processed 100 posts, total: 5300
+2026-05-14 21:24:59,713 - INFO - Fetching page 54/108
+2026-05-14 21:25:06,226 - INFO - Page 54: processed 100 posts, total: 5400
+2026-05-14 21:25:07,229 - INFO - Fetching page 55/108
+2026-05-14 21:25:14,214 - INFO - Page 55: processed 100 posts, total: 5500
+2026-05-14 21:25:15,216 - INFO - Fetching page 56/108
+2026-05-14 21:25:22,500 - INFO - Page 56: processed 100 posts, total: 5600
+2026-05-14 21:25:23,503 - INFO - Fetching page 57/108
+2026-05-14 21:25:28,475 - INFO - Page 57: processed 100 posts, total: 5700
+2026-05-14 21:25:29,478 - INFO - Fetching page 58/108
+2026-05-14 21:25:36,108 - INFO - Page 58: processed 100 posts, total: 5800
+2026-05-14 21:25:37,114 - INFO - Fetching page 59/108
+2026-05-14 21:25:43,899 - INFO - Page 59: processed 100 posts, total: 5900
+2026-05-14 21:25:44,901 - INFO - Fetching page 60/108
+2026-05-14 21:25:54,153 - INFO - Page 60: processed 100 posts, total: 6000
+2026-05-14 21:25:55,158 - INFO - Fetching page 61/108
+2026-05-14 21:26:00,618 - INFO - Page 61: processed 100 posts, total: 6100
+2026-05-14 21:26:01,623 - INFO - Fetching page 62/108
+2026-05-14 21:26:08,456 - INFO - Page 62: processed 100 posts, total: 6200
+2026-05-14 21:26:09,461 - INFO - Fetching page 63/108
+2026-05-14 21:26:14,711 - INFO - Page 63: processed 100 posts, total: 6300
+2026-05-14 21:26:15,716 - INFO - Fetching page 64/108
+2026-05-14 21:26:22,177 - INFO - Page 64: processed 100 posts, total: 6400
+2026-05-14 21:26:23,182 - INFO - Fetching page 65/108
+2026-05-14 21:26:28,416 - INFO - Page 65: processed 100 posts, total: 6500
+2026-05-14 21:26:29,419 - INFO - Fetching page 66/108
+2026-05-14 21:26:36,037 - INFO - Page 66: processed 100 posts, total: 6600
+2026-05-14 21:26:37,042 - INFO - Fetching page 67/108
+2026-05-14 21:26:45,496 - INFO - Page 67: processed 100 posts, total: 6700
+2026-05-14 21:26:46,501 - INFO - Fetching page 68/108
+2026-05-14 21:26:52,907 - INFO - Page 68: processed 100 posts, total: 6800
+2026-05-14 21:26:53,910 - INFO - Fetching page 69/108
+2026-05-14 21:27:01,089 - INFO - Page 69: processed 100 posts, total: 6900
+2026-05-14 21:27:02,094 - INFO - Fetching page 70/108
+2026-05-14 21:27:07,858 - INFO - Page 70: processed 100 posts, total: 7000
+2026-05-14 21:27:08,863 - INFO - Fetching page 71/108
+2026-05-14 21:27:14,400 - INFO - Page 71: processed 100 posts, total: 7100
+2026-05-14 21:27:15,405 - INFO - Fetching page 72/108
+2026-05-14 21:27:22,276 - INFO - Page 72: processed 100 posts, total: 7200
+2026-05-14 21:27:23,278 - INFO - Fetching page 73/108
+2026-05-14 21:27:29,409 - INFO - Page 73: processed 100 posts, total: 7300
+2026-05-14 21:27:30,414 - INFO - Fetching page 74/108
+2026-05-14 21:27:40,180 - INFO - Page 74: processed 100 posts, total: 7400
+2026-05-14 21:27:41,180 - INFO - Fetching page 75/108
+2026-05-14 21:27:48,676 - INFO - Page 75: processed 100 posts, total: 7500
+2026-05-14 21:27:49,679 - INFO - Fetching page 76/108
+2026-05-14 21:27:55,956 - INFO - Page 76: processed 100 posts, total: 7600
+2026-05-14 21:27:56,962 - INFO - Fetching page 77/108
+2026-05-14 21:28:04,407 - INFO - Page 77: processed 100 posts, total: 7700
+2026-05-14 21:28:05,411 - INFO - Fetching page 78/108
+2026-05-14 21:28:11,059 - INFO - Page 78: processed 100 posts, total: 7800
+2026-05-14 21:28:12,064 - INFO - Fetching page 79/108
+2026-05-14 21:28:19,826 - INFO - Page 79: processed 100 posts, total: 7900
+2026-05-14 21:28:20,826 - INFO - Fetching page 80/108
+2026-05-14 21:28:28,046 - INFO - Page 80: processed 100 posts, total: 8000
+2026-05-14 21:28:29,050 - INFO - Fetching page 81/108
+2026-05-14 21:28:40,534 - INFO - Page 81: processed 100 posts, total: 8100
+2026-05-14 21:28:41,537 - INFO - Fetching page 82/108
+2026-05-14 21:28:47,964 - INFO - Page 82: processed 100 posts, total: 8200
+2026-05-14 21:28:48,965 - INFO - Fetching page 83/108
+2026-05-14 21:29:01,306 - INFO - Page 83: processed 100 posts, total: 8300
+2026-05-14 21:29:02,312 - INFO - Fetching page 84/108
+2026-05-14 21:29:10,025 - INFO - Page 84: processed 100 posts, total: 8400
+2026-05-14 21:29:11,027 - INFO - Fetching page 85/108
+2026-05-14 21:29:23,940 - INFO - Page 85: processed 100 posts, total: 8500
+2026-05-14 21:29:24,946 - INFO - Fetching page 86/108
+2026-05-14 21:29:33,307 - INFO - Page 86: processed 100 posts, total: 8600
+2026-05-14 21:29:34,312 - INFO - Fetching page 87/108
+2026-05-14 21:29:41,437 - INFO - Page 87: processed 100 posts, total: 8700
+2026-05-14 21:29:42,442 - INFO - Fetching page 88/108
+2026-05-14 21:29:48,979 - INFO - Page 88: processed 100 posts, total: 8800
+2026-05-14 21:29:49,984 - INFO - Fetching page 89/108
+2026-05-14 21:29:56,847 - INFO - Page 89: processed 100 posts, total: 8900
+2026-05-14 21:29:57,853 - INFO - Fetching page 90/108
+2026-05-14 21:30:04,755 - INFO - Page 90: processed 100 posts, total: 9000
+2026-05-14 21:30:05,756 - INFO - Fetching page 91/108
+2026-05-14 21:30:10,313 - INFO - Page 91: processed 100 posts, total: 9100
+2026-05-14 21:30:11,319 - INFO - Fetching page 92/108
+2026-05-14 21:30:15,827 - INFO - Page 92: processed 100 posts, total: 9200
+2026-05-14 21:30:16,830 - INFO - Fetching page 93/108
+2026-05-14 21:30:21,144 - INFO - Page 93: processed 100 posts, total: 9300
+2026-05-14 21:30:22,145 - INFO - Fetching page 94/108
+2026-05-14 21:30:25,699 - INFO - Page 94: processed 100 posts, total: 9400
+2026-05-14 21:30:26,704 - INFO - Fetching page 95/108
+2026-05-14 21:30:31,454 - INFO - Page 95: processed 100 posts, total: 9500
+2026-05-14 21:30:32,455 - INFO - Fetching page 96/108
+2026-05-14 21:30:36,035 - INFO - Page 96: processed 100 posts, total: 9600
+2026-05-14 21:30:37,037 - INFO - Fetching page 97/108
+2026-05-14 21:30:43,026 - INFO - Page 97: processed 100 posts, total: 9700
+2026-05-14 21:30:44,028 - INFO - Fetching page 98/108
+2026-05-14 21:30:48,089 - INFO - Page 98: processed 100 posts, total: 9800
+2026-05-14 21:30:49,095 - INFO - Fetching page 99/108
+2026-05-14 21:30:53,466 - INFO - Page 99: processed 100 posts, total: 9900
+2026-05-14 21:30:54,470 - INFO - Fetching page 100/108
+2026-05-14 21:30:59,490 - INFO - Page 100: processed 100 posts, total: 10000
+2026-05-14 21:31:00,495 - INFO - Fetching page 101/108
+2026-05-14 21:31:05,003 - INFO - Page 101: processed 100 posts, total: 10100
+2026-05-14 21:31:06,008 - INFO - Fetching page 102/108
+2026-05-14 21:31:10,534 - INFO - Page 102: processed 100 posts, total: 10200
+2026-05-14 21:31:11,539 - INFO - Fetching page 103/108
+2026-05-14 21:31:16,175 - INFO - Page 103: processed 100 posts, total: 10300
+2026-05-14 21:31:17,176 - INFO - Fetching page 104/108
+2026-05-14 21:31:22,824 - INFO - Page 104: processed 100 posts, total: 10400
+2026-05-14 21:31:23,825 - INFO - Fetching page 105/108
+2026-05-14 21:31:28,068 - INFO - Page 105: processed 100 posts, total: 10500
+2026-05-14 21:31:29,073 - INFO - Fetching page 106/108
+2026-05-14 21:31:35,159 - INFO - Page 106: processed 100 posts, total: 10600
+2026-05-14 21:31:36,161 - INFO - Fetching page 107/108
+2026-05-14 21:31:40,494 - INFO - Page 107: processed 100 posts, total: 10700
+2026-05-14 21:31:41,495 - INFO - Fetching page 108/108
+2026-05-14 21:31:44,001 - INFO - Page 108: processed 44 posts, total: 10744
+2026-05-14 21:31:45,003 - INFO - Scraping complete. Total transcripts: 10744
+2026-05-14 21:31:45,021 - INFO - HTML files: 10744
+2026-05-14 21:31:45,021 - INFO - CSV rows: 10744
+2026-05-14 21:31:45,021 - INFO - HTML files and CSV rows match
+2026-05-14 21:31:45,022 - INFO - Sample file 566313.html.gz: 65083 chars
+2026-05-14 21:31:45,022 - INFO - Sample content preview:
+2026-05-14 21:31:45,022 - INFO - <p>RACHEL MADDOW, MSNBC HOST: The President denounced it as if it wasn`t true and denounced her for having written it and Christi Grimm was sure enough soon pushed out of that supposedly independent job at HHS.</p>
+<p>But here`s the thing, they can`t just disappear these people. On Tuesday, the first day back from the long weekend Christi Grimm is going to testify live in public session at the House Oversight Committee, which is going to be absolutely worth seeing, worth looking forward to.</p>
+
+2026-05-14 21:31:45,043 - INFO - Date range: 2010-05-27 to 2025-06-02

@@ -1,2 +1,4 @@
 .DS_Store
 /scripts/.ipynb_checkpoints
+*.gz
+/scripts/__pycache__
