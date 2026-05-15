@@ -1,75 +1,77 @@
-### MSNBC Transcripts: 2010--2022
+# MSNBC Transcripts
 
-We scraped https://www.msnbc.com/transcripts to get all the transcripts from 2010--2021.
+Collection of MSNBC show transcripts from 2010–2022.
 
-```
-year	 n_transcripts
-2010      43
-2011     115
-2012     205
-2013     175
-2014     217
-2015     986
-2016     907
-2017    1185
-2018    1468
-2019    1475
-2020    1286
-2021    1476
-2022     131
-```
+## Download
 
-When I scraped in 03/2025, I got the following (so essentially 2022)
+All data are available on Harvard Dataverse:
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UPJDE1
 
-```
-year
-2017       2
-2020     703
-2021    1479
-2022    1156
-2023      52
-2024      48
-2025      11
-```
+## Available Data
 
-### WordPress API Scrape (05/2026)
+### API Scrape (May 2026) — Recommended
 
-A more comprehensive scrape using the WordPress REST API (`scripts/msnbc_api.py`) retrieved **10,739 transcripts** across **216 shows** from May 2010 through October 2022.
+10,739 transcripts across 216 shows, May 2010 – October 2022.
 
-```
-year   n_transcripts
-2010       43
-2011      115
-2012      233
-2013      237
-2014      217
-2015      994
-2016      906
-2017     1185
-2018     1467
-2019     1475
-2020     1288
-2021     1471
-2022     1108
-```
+| Year | Transcripts |
+|------|-------------|
+| 2010 | 43 |
+| 2011 | 115 |
+| 2012 | 233 |
+| 2013 | 237 |
+| 2014 | 217 |
+| 2015 | 994 |
+| 2016 | 906 |
+| 2017 | 1,185 |
+| 2018 | 1,467 |
+| 2019 | 1,475 |
+| 2020 | 1,288 |
+| 2021 | 1,471 |
+| 2022 | 1,108 |
 
-### Scripts
+**Files:**
+- `msnbc_transcripts_api_2010-2022.tar.gz` — HTML transcript files (186MB)
+- `msnbc_transcripts_api_2010-2022_metadata.csv` — metadata for all transcripts
+- `msnbc_shows_api.csv` — show list with transcript counts
 
-1. [HTML Scraper](scripts/msnbc.py) - scrapes transcript listing pages
-2. [WordPress API Scraper](scripts/msnbc_api.py) - uses REST API to fetch transcripts
-3. [Quick Peek](scripts/peek_file.ipynb)
-4. [Upload to Dataverse](scripts/upload_to_dataverse.ipynb)
+### Earlier Scrapes
 
-### Data
+- **2003–2014 scrape**: 16k transcripts from an earlier collection
+- **2025 HTML scrape**: `msnbc_transcripts_2022.csv.gz` — transcripts from 2020–2025 scraped from listing pages
 
-**May 2026 API scrape:**
-- `data/msnbc_transcripts_api_2010-2022.tar.gz` (186MB) - 10,739 HTML transcript files
-- `data/msnbc_transcripts_api_2010-2022_metadata.csv` - metadata for all transcripts
-- `data/msnbc_shows_api.csv` - 216 shows with transcript counts
+## Data Format
 
-**Previous scrapes:**
-- The final data posted on the Harvard Dataverse includes 16k scripts spanning 2003--2014 that were scraped earlier
-- The data scraped in 2025 is stored under `msnbc_transcripts_2022.csv.gz`
+### Metadata CSV (`msnbc_transcripts_api_2010-2022_metadata.csv`)
 
-The data are posted at:
-https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FUPJDE1
+| Column | Description |
+|--------|-------------|
+| `id` | Unique transcript ID |
+| `date` | Publication date (ISO 8601) |
+| `title` | Transcript title |
+| `url` | Original URL |
+| `slug` | URL slug |
+| `guests` | Guest names |
+| `show_ids` | Associated show IDs |
+| `modified` | Last modified date |
+
+### Shows CSV (`msnbc_shows_api.csv`)
+
+| Column | Description |
+|--------|-------------|
+| `id` | Show ID |
+| `name` | Show name |
+| `slug` | URL slug |
+| `count` | Number of transcripts |
+
+### HTML Files
+
+Each transcript is saved as an HTML file named `{id}.html` containing the full transcript text.
+
+## Scripts
+
+For reproducibility or extending the dataset:
+
+- [WordPress API Scraper](scripts/msnbc_api.py) — REST API scraper (recommended)
+- [HTML Scraper](scripts/msnbc.py) — scrapes transcript listing pages
+- [Quick Peek](scripts/peek_file.ipynb) — preview data
+- [Upload to Dataverse](scripts/upload_to_dataverse.ipynb)
