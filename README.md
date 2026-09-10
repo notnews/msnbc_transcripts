@@ -33,7 +33,7 @@ API JSONL also retains `show_ids`, `shows`, and source metadata. Empty taxonomy 
 
 The original API result of 10,744 posts was trimmed to 10,739 through 2022-10-04. The release has a September 2010–June 2011 gap. All 10,739 local metadata rows have empty `show_ids`; this reflects missing post-to-taxonomy assignments in the response, not proof that the programs are unknown. The 216-entry shows CSV contains taxonomy counts, not verified transcript counts per show. New scraping resolves `/show?post=<id>` only for posts carrying show IDs.
 
-Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC repository documents the same ND1TCV corpus; do not add its count as a separate collection. The unsupported “16k transcripts from 2003–2014” claim has been removed. Exact-URL deduplication does not resolve aliases across msnbc.com and ms.now.
+Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC repository documents the same ND1TCV corpus; do not add its count as a separate collection. Exact-URL deduplication does not resolve aliases across msnbc.com and ms.now.
 
 ## Collection methods
 
@@ -43,7 +43,7 @@ Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC re
 | 2025 | Discover listing pages and parse MSNBC HTML |
 | 2026 onward | Page through `/wp-json/wp/v2/transcript`, following `X-WP-TotalPages`; resume by post ID |
 
-The pre-cleanup implementation is preserved at [3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0](https://github.com/notnews/msnbc_transcripts/tree/3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0). New fetches write checkpoints under `data/`; reruns skip successful records and retry failures. Pure parsers read saved responses without accessing the network. Fixture provenance is in [tests/fixtures/SOURCES.md](tests/fixtures/SOURCES.md).
+The historical implementation is preserved at [3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0](https://github.com/notnews/msnbc_transcripts/tree/3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0). New fetches write checkpoints under `data/`; reruns skip successful records and retry failures. Pure parsers read saved responses without accessing the network. Fixture provenance is in [tests/fixtures/SOURCES.md](tests/fixtures/SOURCES.md).
 
 An interrupted, unterminated final JSONL record is removed before resuming; complete records are preserved. A valid final record missing only its newline is retained. Malformed complete lines remain errors.
 
@@ -94,4 +94,4 @@ Use [CITATION.cff](CITATION.cff) and cite the relevant [Dataverse release](https
 
 ## License
 
-Code is [MIT licensed](LICENSE). News text, abstracts, and archived pages retain their owners' rights; a code license does not grant rights to those materials. Consult the terms of the linked data release.
+Code is [MIT licensed](LICENSE). News text, abstracts, and archived pages retain their owners' rights; a code license does not grant rights to those materials. The [Dataverse DOI record](https://api.datacite.org/dois/10.7910/DVN/UPJDE1) specifies CC0 1.0 for the deposit. Consult the release for access conditions.
