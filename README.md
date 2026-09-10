@@ -12,13 +12,13 @@ Tools and provenance for MSNBC transcript collections from NBC-hosted legacy pag
 |---|---|---|---:|---|
 | API collection | `msnbc_transcripts_api_2010-2022_metadata.csv`, `msnbc_transcripts_api_2010-2022.tar.gz`, `msnbc_shows_api.csv` | 2010-05-27–2022-10-04 | 10,739, verified locally | [UPJDE1](https://doi.org/10.7910/DVN/UPJDE1) |
 | Legacy NBC-hosted corpus | Raw HTML and parsed CSV | 2008–2014 | 5,369, historical release count | [ND1TCV](https://doi.org/10.7910/DVN/ND1TCV) |
-| 2025 listing-page collection | `msnbc_transcripts_2022.csv.gz` | 2017-04-30–2025-03-15 | 3,451, handoff count | [UPJDE1](https://doi.org/10.7910/DVN/UPJDE1) |
+| 2025 listing-page collection | `msnbc_transcripts_2022.csv.gz` | 2017-04-30–2025-03-15 | 3,451, historically reported; not reverified | [UPJDE1](https://doi.org/10.7910/DVN/UPJDE1) |
 
-Historical counts below describe published releases or the local files identified in the table, not a new full collection. Dataverse metadata requests returned HTTP 403 during cleanup on 2026-09-10; unverified release claims remain labeled as historical documentation.
+Counts describe the releases or local files identified above. Dataverse metadata requests returned HTTP 403 on 2026-09-10, so historical release counts could not all be reverified.
 
 ## Column dictionary
 
-| Parquet columns | Type | Meaning |
+| Columns | Type | Description |
 |---|---|---|
 | `id`, `url` | string | Source identifier and original URL; deduplication uses exact URL, first input wins |
 | `title`, `program` | string | Headline and program label parsed from title or legacy column |
@@ -35,7 +35,7 @@ The original API result of 10,744 posts was trimmed to 10,739 through 2022-10-04
 
 Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC repository documents the same ND1TCV corpus; do not add its count as a separate collection. The unsupported “16k transcripts from 2003–2014” claim has been removed. Exact-URL deduplication does not resolve aliases across msnbc.com and ms.now.
 
-## How collected
+## Collection methods
 
 | Era | Method |
 |---|---|
@@ -49,19 +49,44 @@ An interrupted, unterminated final JSONL record is removed before resuming; comp
 
 ## Usage
 
-Python 3.12 or later and [uv](https://docs.astral.sh/uv/) are required.
+Python 3.12 or later and [uv](https://docs.astral.sh/uv/) are required. Run these commands from the repository root. Keep downloaded inputs and generated files under ignored `data/`.
+
+### Install
 
 ```sh
 uv sync --frozen --group dev
+```
+
+### Collect
+
+```sh
 uv run msnbc-transcripts scrape --since 2025-06-01 --limit 5
+```
+
+### Convert
+
+```sh
 uv run msnbc-transcripts to-parquet data/transcripts.jsonl --out data/transcripts.parquet
 uv run msnbc-transcripts to-parquet data/msnbc_transcripts_api_2010-2022_metadata.csv --html-dir data/transcripts_html --out data/api.parquet
+```
+
+### Upload
+
+The `upload` command reads `DATAVERSE_API_TOKEN` from the environment and adds the specified file to Dataverse. It does not publish a dataset version.
+
+```sh
 uv run msnbc-transcripts upload data/transcripts.parquet
 ```
 
-Run `make check` for Ruff, formatting, pytest, and pre-commit. `make ci-docker` runs lint and tests in standard Python 3.12 and 3.14 Docker images. CI uses the same lockfile and checks. Large inputs and generated data belong under ignored `data/`, not in Git.
+## Development
 
-The `upload` command reads `DATAVERSE_API_TOKEN` from the environment and adds the specified file to Dataverse. It does not publish a dataset version. Cleanup does not upload or replace any remote data.
+Run the local checks:
+
+```sh
+make check
+```
+
+This runs Ruff, formatting, pytest, and pre-commit. Run `make ci-docker` to check lint and tests in standard Python 3.12 and 3.14 Docker images. CI uses the same lockfile and checks. Install the Git hooks with `uv run pre-commit install`.
 
 ## Citation
 
