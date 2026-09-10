@@ -43,7 +43,7 @@ Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC re
 | 2025 | Discover listing pages and parse MSNBC HTML |
 | 2026 onward | Page through `/wp-json/wp/v2/transcript`, following `X-WP-TotalPages`; resume by post ID |
 
-The pre-cleanup implementation is preserved at [285ec65](https://github.com/notnews/msnbc_transcripts/tree/285ec65). New fetches write checkpoints under `data/`; reruns skip successful records and retry failures. Pure parsers read saved responses without accessing the network. Fixture provenance is in [tests/fixtures/SOURCES.md](tests/fixtures/SOURCES.md).
+The pre-cleanup implementation is preserved at [3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0](https://github.com/notnews/msnbc_transcripts/tree/3f40bd6af6dcc23ce22d6f20275dc460fbb9beb0). New fetches write checkpoints under `data/`; reruns skip successful records and retry failures. Pure parsers read saved responses without accessing the network. Fixture provenance is in [tests/fixtures/SOURCES.md](tests/fixtures/SOURCES.md).
 
 An interrupted, unterminated final JSONL record is removed before resuming; complete records are preserved. A valid final record missing only its newline is retained. Malformed complete lines remain errors.
 
