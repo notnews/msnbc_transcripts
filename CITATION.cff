@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use these data or scripts, please cite them as below."
+title: "MSNBC Transcripts 2008--2022"
+type: dataset
+version: "1.0.0"
+date-released: 2026-05-14
+authors:
+  - family-names: "Sood"
+    given-names: "Gaurav"
+    email: "gsood07@gmail.com"
+  - family-names: "Laohaprapanon"
+    given-names: "Suriyan"
+repository-code: "https://github.com/notnews/msnbc_transcripts"
+identifiers:
+  - type: doi
+    value: "10.7910/DVN/UPJDE1"
+    description: "API scrape 2010--2022 and 2025 listing-page scrape on Harvard Dataverse."
+  - type: doi
+    value: "10.7910/DVN/ND1TCV"
+    description: "Legacy 2008--2014 nbcnews.com scrape: raw HTML and CSV."
+license: MIT
+keywords:
+  - MSNBC
+  - transcripts
+  - cable news
+  - text corpus
