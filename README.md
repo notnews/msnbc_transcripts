@@ -1,106 +1,72 @@
-# MSNBC Transcripts
+# MSNBC Transcripts 2008–2022
 
-Collection of MSNBC show transcripts from 2008–2022.
+[![CI](https://github.com/notnews/msnbc_transcripts/actions/workflows/ci.yml/badge.svg)](https://github.com/notnews/msnbc_transcripts/actions/workflows/ci.yml)
+[![Data](https://img.shields.io/badge/data-Dataverse-blue)](https://doi.org/10.7910/DVN/UPJDE1)
+[![Code license](https://img.shields.io/badge/code-MIT-green)](LICENSE)
 
-## Download
+Tools and provenance for MSNBC transcript collections from NBC-hosted legacy pages, MSNBC listing pages, and the ms.now WordPress API. These sources overlap and have different coverage.
 
-All data are available on Harvard Dataverse:
-https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UPJDE1
+## Data
 
-## Available Data
+| Release | Files | Coverage | Rows | DOI |
+|---|---|---|---:|---|
+| API collection | `msnbc_transcripts_api_2010-2022_metadata.csv`, `msnbc_transcripts_api_2010-2022.tar.gz`, `msnbc_shows_api.csv` | 2010-05-27–2022-10-04 | 10,739, verified locally | [UPJDE1](https://doi.org/10.7910/DVN/UPJDE1) |
+| Legacy NBC-hosted corpus | Raw HTML and parsed CSV | 2008–2014 | 5,369, historical release count | [ND1TCV](https://doi.org/10.7910/DVN/ND1TCV) |
+| 2025 listing-page collection | `msnbc_transcripts_2022.csv.gz` | 2017-04-30–2025-03-15 | 3,451, handoff count | [UPJDE1](https://doi.org/10.7910/DVN/UPJDE1) |
 
-### API Scrape (May 2026) — Recommended
+Historical counts below describe published releases or the local files identified in the table, not a new full collection. Dataverse metadata requests returned HTTP 403 during cleanup on 2026-09-10; unverified release claims remain labeled as historical documentation.
 
-10,739 transcripts across 216 shows, May 2010 – October 2022.
+## Column dictionary
 
-| Year | Transcripts |
-|------|-------------|
-| 2010 | 43 |
-| 2011 | 115 |
-| 2012 | 233 |
-| 2013 | 237 |
-| 2014 | 217 |
-| 2015 | 994 |
-| 2016 | 906 |
-| 2017 | 1,185 |
-| 2018 | 1,467 |
-| 2019 | 1,475 |
-| 2020 | 1,288 |
-| 2021 | 1,471 |
-| 2022 | 1,108 |
+| Parquet columns | Type | Meaning |
+|---|---|---|
+| `id`, `url` | string | Source identifier and original URL; deduplication uses exact URL, first input wins |
+| `title`, `program` | string | Headline and program label parsed from title or legacy column |
+| `aired_date`, `aired_time` | date, string | API publication date/time or historical airing fields; these are not guaranteed equivalent |
+| `guests`, `summary` | string | Supplied guest list and summary, when available |
+| `text`, `wordcount` | string, int32 | Transcript and whitespace word count; null when a required HTML file is missing |
+| `source` | string | Input filename |
 
-**Files:**
-- `msnbc_transcripts_api_2010-2022.tar.gz` — HTML transcript files (186MB)
-- `msnbc_transcripts_api_2010-2022_metadata.csv` — metadata for all transcripts
-- `msnbc_shows_api.csv` — show list with transcript counts
+API JSONL also retains `show_ids`, `shows`, and source metadata. Empty taxonomy arrays produce `shows: null`. Saved API HTML files are `{id}.html.gz`.
 
-### Legacy Scrape (2008–2014)
+## Coverage and known gaps
 
-5,369 transcripts from the now-defunct http://www.nbcnews.com/id/3719710, scraped via [archive.org](https://web.archive.org/web/20170601234403/http://www.nbcnews.com/id/3719710).
+The original API result of 10,744 posts was trimmed to 10,739 through 2022-10-04. The release has a September 2010–June 2011 gap. All 10,739 local metadata rows have empty `show_ids`; this reflects missing post-to-taxonomy assignments in the response, not proof that the programs are unknown. The 216-entry shows CSV contains taxonomy counts, not verified transcript counts per show. New scraping resolves `/show?post=<id>` only for posts carrying show IDs.
 
-| Year | Transcripts |
-|------|-------------|
-| 2008 | 76 |
-| 2009 | 434 |
-| 2010 | 752 |
-| 2011 | 1,042 |
-| 2012 | 1,164 |
-| 2013 | 1,177 |
-| 2014 | 724 |
+Legacy dates contain typos such as “Thusday” and “Februrary”. The NBC repository documents the same ND1TCV corpus; do not add its count as a separate collection. The unsupported “16k transcripts from 2003–2014” claim has been removed. Exact-URL deduplication does not resolve aliases across msnbc.com and ms.now.
 
-**Files (on Dataverse):**
-- Raw HTML files and final CSV available at: https://doi.org/10.7910/DVN/ND1TCV
+## How collected
 
-**Local files:**
-- `data/legacy_2008-2014/legacy_2008-2014_links.csv` — list of all transcript URLs
-- `data/legacy_2008-2014/legacy_2008-2014_links_with_metadata.txt` — URLs with show names and dates
+| Era | Method |
+|---|---|
+| 2014 legacy | Parse `div#intelliTXT` from NBC pages; original scripts were Python 2 |
+| 2025 | Discover listing pages and parse MSNBC HTML |
+| 2026 onward | Page through `/wp-json/wp/v2/transcript`, following `X-WP-TotalPages`; resume by post ID |
 
-**Notes:**
-- Scripts from 2014
-- Some transcripts had date typos (e.g., 'Thusday', 'Februrary') causing parsing failures
+The pre-cleanup implementation is preserved at [285ec65](https://github.com/notnews/msnbc_transcripts/tree/285ec65). New fetches write checkpoints under `data/`; reruns skip successful records and retry failures. Pure parsers read saved responses without accessing the network. Fixture provenance is in [tests/fixtures/SOURCES.md](tests/fixtures/SOURCES.md).
 
-### Earlier Scrapes
+An interrupted, unterminated final JSONL record is removed before resuming; complete records are preserved. A valid final record missing only its newline is retained. Malformed complete lines remain errors.
 
-- **2003–2014 scrape**: 16k transcripts from an earlier collection
-- **2025 HTML scrape**: `msnbc_transcripts_2022.csv.gz` — transcripts from 2020–2025 scraped from listing pages
+## Usage
 
-## Data Format
+Python 3.12 or later and [uv](https://docs.astral.sh/uv/) are required.
 
-### Metadata CSV (`msnbc_transcripts_api_2010-2022_metadata.csv`)
+```sh
+uv sync --frozen --group dev
+uv run msnbc-transcripts scrape --since 2025-06-01 --limit 5
+uv run msnbc-transcripts to-parquet data/transcripts.jsonl --out data/transcripts.parquet
+uv run msnbc-transcripts to-parquet data/msnbc_transcripts_api_2010-2022_metadata.csv --html-dir data/transcripts_html --out data/api.parquet
+uv run msnbc-transcripts upload data/transcripts.parquet
+```
 
-| Column | Description |
-|--------|-------------|
-| `id` | Unique transcript ID |
-| `date` | Publication date (ISO 8601) |
-| `title` | Transcript title |
-| `url` | Original URL |
-| `slug` | URL slug |
-| `guests` | Guest names |
-| `show_ids` | Associated show IDs |
-| `modified` | Last modified date |
+Run `make check` for Ruff, formatting, pytest, and pre-commit. `make ci-docker` runs lint and tests in standard Python 3.12 and 3.14 Docker images. CI uses the same lockfile and checks. Large inputs and generated data belong under ignored `data/`, not in Git.
 
-### Shows CSV (`msnbc_shows_api.csv`)
+The `upload` command reads `DATAVERSE_API_TOKEN` from the environment and adds the specified file to Dataverse. It does not publish a dataset version. Cleanup does not upload or replace any remote data.
 
-| Column | Description |
-|--------|-------------|
-| `id` | Show ID |
-| `name` | Show name |
-| `slug` | URL slug |
-| `count` | Number of transcripts |
+## Citation
 
-### HTML Files
+Use [CITATION.cff](CITATION.cff) and cite the relevant [Dataverse release](https://doi.org/10.7910/DVN/UPJDE1), including its version and DOI.
 
-Each transcript is saved as an HTML file named `{id}.html` containing the full transcript text.
+## License
 
-## Scripts
-
-For reproducibility or extending the dataset:
-
-- [WordPress API Scraper](scripts/msnbc_api.py) — REST API scraper (recommended)
-- [HTML Scraper](scripts/msnbc.py) — scrapes transcript listing pages
-- [Quick Peek](scripts/peek_file.ipynb) — preview data
-- [Upload to Dataverse](scripts/upload_to_dataverse.ipynb)
-
-**Legacy scripts (2008–2014):**
-- [Legacy Crawl](scripts/legacy/msnbc_legacy_crawl.py) — crawls archive.org for transcript links
-- [Legacy Extract](scripts/legacy/msnbc_legacy_extract.py) — extracts transcripts from HTML files
+Code is [MIT licensed](LICENSE). News text, abstracts, and archived pages retain their owners' rights; a code license does not grant rights to those materials. Consult the terms of the linked data release.
