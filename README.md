@@ -95,3 +95,15 @@ Use [CITATION.cff](CITATION.cff) and cite the relevant [Dataverse release](https
 ## License
 
 Code is [MIT licensed](LICENSE). News text, abstracts, and archived pages retain their owners' rights; a code license does not grant rights to those materials. The [Dataverse DOI record](https://api.datacite.org/dois/10.7910/DVN/UPJDE1) specifies CC0 1.0 for the deposit. Consult the release for access conditions.
+
+<!-- adjacent:start -->
+
+## 🔗 Adjacent Repositories
+
+- [notnews/fox_news_transcripts](https://github.com/notnews/fox_news_transcripts) — Fox News Transcripts 2003--2025
+- [notnews/stanford_tv_news](https://github.com/notnews/stanford_tv_news) — Stanford Cable TV News Dataset
+- [notnews/cnn_transcripts](https://github.com/notnews/cnn_transcripts) — CNN Transcripts 2000--2025
+
+_Powered by [Adjacent](https://github.com/gojiplus/adjacent)_
+
+<!-- adjacent:end -->
