@@ -99,9 +99,9 @@ Code is [MIT licensed](LICENSE). News text, abstracts, and archived pages retain
 
 ## 🔗 Adjacent Repositories
 
-- [notnews/fox_news_transcripts](https://github.com/notnews/fox_news_transcripts) — Fox News Transcripts 2003--2025
-- [notnews/stanford_tv_news](https://github.com/notnews/stanford_tv_news) — Stanford Cable TV News Dataset
 - [notnews/cnn_transcripts](https://github.com/notnews/cnn_transcripts) — CNN Transcripts 2000--2025
+- [notnews/fox_news_transcripts](https://github.com/notnews/fox_news_transcripts) — Fox News Transcripts 2003--2025
+- [notnews/nbc_transcripts](https://github.com/notnews/nbc_transcripts) — NBC-hosted MSNBC transcripts 2008–2014
 
 _Powered by [Adjacent](https://github.com/gojiplus/adjacent)_
 
